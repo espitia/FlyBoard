@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>
+      Blog | CartagenaFlyBoard
+    </title>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+    rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!--#include file="ssi/mixpanel.html" -->
+
+    <style type="text/css">
+    	html, body {
+    		height: 100%;
+		}
+	</style>
+</head>
+  
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand text-center" href="index.html" style="padding: 0; margin: 8px 20px 0 20px;"><img src="imgs/circle-logo.png" width="30px"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="index.html">Inicio</a>
+            </li>
+            <li>
+              <a id="clicked2reserve-navbar" href="reserva.html">Reserva en linea</a>
+              <script>
+                  mixpanel.track_links("#clicked2reserve-navbar","clicked2reserve", {
+                    "page":"index",
+                    "where": "nav-bar",
+                  });
+                </script>
+            </li>
+            <li>
+              <a href="compra.html">Compra tu FlyBoard</a>
+            </li>
+            <li>
+              <a href="galeria.html">Galeria</a>
+            </li>
+            <li>
+              <a id="clicked2contact-navbar" href="contactenos.html">Contactenos</a>
+              <script>
+                  mixpanel.track_links("#clicked2contact-navbar","clicked2contact", {
+                    "page":"index",
+                    "where": "nav-bar",
+                  });
+                </script>
+            </li>
+          </ul>
+          <div style="position: relative; top: 15px;" class="hide-when-small pull-right">
+            <p class="lead" style="color:white; display:inline; float:left; margin: 0 30px 10px 0; padding: 0; font-size: 16px;">(+57) 300 253 3605</p>
+            <a href="EN/index.html" class="link-no-deco">
+              <img src="imgs/english-flag-icon.jpg" alt="English flag" style="border-radius:3px;">
+            </a>
+            &nbsp;
+            <a href="#" class="link-no-deco">
+              <img src="imgs/colombia-flag-icon.jpg" alt="Colombian flag" style="border-radius:3px;">
+            </a>
+          </div>
+        </div>
+        </div>
+        <!--/.navbar-collapse -->
+      </div>
+	
+	<iframe src="http://cartagena-flyboard.tumblr.com" width="100%" height="100%" frameborder="0"></iframe>
+
+
+	</body>
+
+	<!--#include file="ssi/footer.html" -->
+</html>

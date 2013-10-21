@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>
+      Contactenos | Cartagena FlyBoard
+    </title>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+    rel="stylesheet">
+    <link href="css/contactenos.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+  
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand text-center" href="index.html" style="padding: 0; margin: 8px 20px 0 20px;"><img src="imgs/circle-logo.png" width="30px"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="reserva.html">Rent a FlyBoard</a>
+            </li>
+            <li>
+              <a href="compra.html">Buy a FlyBoard</a>
+            </li>
+            <li>
+              <a href="galeria.html">Gallery</a>
+            </li>
+            <li class="active">
+              <a href="contactenos.html">Contact Us</a>
+            </li>
+          </ul>
+          <div style="position: relative; top: 15px;" class="hide-when-small pull-right link-colors">
+            <p class="lead" style="color:white; display:inline; float:left; margin: 0 30px 10px 0; padding: 0; font-size: 16px;">(+57) 300 253 3605</p>
+            <a href="#" class="link-no-deco">
+              <img src="../imgs/english-flag-icon.jpg" alt="English flag" style="border-radius:3px;">
+            </a>
+            &nbsp;
+            <a href="../index.html" class="link-no-deco">
+              <img src="../imgs/colombia-flag-icon.jpg" alt="Colombian flag" style="border-radius:3px;">
+            </a>
+          </div>
+        </div>
+        </div>
+        <!--/.navbar-collapse -->
+      </div>
+    </div>
+    <!-- Main jumbotron for a primary marketing message or call to action
+    -->
+    <div id="bg-roller" class="jumbotron bg-blue ready-for-bgpic">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="transparent-div-header center-when-small">
+              <h1 style="color:white;">
+                Contact us<br>today!
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 center-when-small" style="margin-top: 40px;">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img src="svg/phone.svg" width="120px">
+            </div>
+            <div class="col-md-8">
+              <h3>
+                Phone Number
+              </h3>
+              <p class="lead">
+                +57 300 253 3605
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img src="svg/office.svg" style="fill:#0b8fdb;" width="120px;">
+            </div>
+            <div class="col-md-8">
+              <h3>
+                Address
+              </h3>
+              <p class="lead">
+                Hotel Las Americas, Anillo Vial,
+                <br>
+                Sector Cielo Mar, 30390
+                <br>
+                Cartagena, Colombia
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md7 col-md-7" style="display: block;">
+          <div class="well" style="margin-top:25px;">
+            <form method="post" action="contactenos-form.php">
+              <fieldset>
+                <div class="form-group">
+                  <label for="Name">
+                    Name
+                  </label>
+                  <input name="name" type="text" class="form-control" size="40">
+                </div>
+                <div class="form-group">
+                  <label for="telephone">
+                    Phone Number
+                  </label>
+                  <input name="telephone" type="text" class="form-control" size="50" style="width: 40;">
+                </div>
+                <div class="form-group">
+                  <label for="">
+                    Email
+                  </label>
+                  <input name="email" type="email" class="form-control" placeholder="">
+                </div>
+                <div class="form-group">
+                  <textarea name="message" class="form-control" rows="5"></textarea>
+                </div>
+                <input type="submit" name="submit" class="btn btn-success btn-lg">
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end container -->
+
+    <!--#include file="ssi/footer.html" -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js">
+    </script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script>
+      $("#bg-roller").backstretch([
+            "imgs/header-bg/photo1.jpg"
+          , "imgs/header-bg/photo5.jpg"
+          , "imgs/header-bg/photo6.jpg"
+          , "imgs/header-bg/photo7.jpg"
+          , "imgs/header-bg/photo8.jpg"
+          , "imgs/header-bg/photo9.jpg"
+          , "imgs/header-bg/photo10.jpg"
+          , "imgs/header-bg/photo11.jpg"
+          , "imgs/header-bg/photo12.jpg"
+          , "imgs/header-bg/photo13.jpg"
+        ], {duration: 3000, fade: 750});
+    </script>
+
+  </body>
+
+</html>

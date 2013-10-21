@@ -1,0 +1,2 @@
+dAddHandler server-parsed .html .htm
+AddHandler server-parsed .html .htm
