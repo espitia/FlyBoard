@@ -33,7 +33,15 @@
               <a href="index.html">Home</a>
             </li>
             <li>
-              <a href="reserva.html">Rent a FlyBoard</a>
+              <a id="clicked2reserve-navbar" href="reserva.html">
+                Rent a FlyBoard
+              </a>
+              <script>
+                mixpanel.track("#clicked2reserve-navbar","clicked2reserve", {
+                  "page": "EN-gracias",
+                  "where": "navbar",
+                });
+              </script>
             </li>
             <li>
               <a href="compra.html">Buy a FlyBoard</a>
@@ -42,7 +50,13 @@
               <a href="galeria.html">Gallery</a>
             </li>
             <li class="active">
-              <a href="contactenos.html">Contact Us</a>
+              <a id="clicked2contact-navbar" href="compra.html">Contact Us</a>
+              <script>
+                mixpanel.track("#clicked2contact-navbar","clicked2contact", {
+                  "page": "EN-gracias",
+                  "where": "navbar",
+                });
+              </script>
             </li>
           </ul>
           <div style="position: relative; top: 15px;" class="hide-when-small pull-right link-colors">
@@ -170,6 +184,11 @@
           , "imgs/header-bg/photo12.jpg"
           , "imgs/header-bg/photo13.jpg"
         ], {duration: 3000, fade: 750});
+    </script>
+    <script>
+      mixpanel.track("Page loaded", {
+        "which": "EN-gracias",
+      });
     </script>
 
   </body>

@@ -33,7 +33,13 @@
               <a href="index.html">Home</a>
             </li>
             <li>
-              <a href="reserva.html">Rent a FlyBoard</a>
+              <a id="clicked2reserve-navbar" href="reserva.html">Rent a FlyBoard</a>
+              <script>
+                  mixpanel.track_links("#clicked2reserve-navbar","clicked2reserve", {
+                    "page":"EN-index",
+                    "where": "nav-bar",
+                  });
+                </script>
             </li>
             <li>
               <a href="compra.html">Buy a FlyBoard</a>
@@ -42,7 +48,13 @@
               <a href="galeria.html">Gallery</a>
             </li>
             <li>
-              <a href="contactenos.html">Contact Us</a>
+              <a id="clicked2contact-navbar" href="contactenos.html">Contact Us</a>
+              <script>
+                  mixpanel.track_links("#clicked2contact-navbar","clicked2contact", {
+                    "page":"EN-index",
+                    "where": "nav-bar",
+                  });
+                </script>
             </li>
           </ul>
           <div style="position: relative; top: 15px;" class="hide-when-small pull-right link-colors">
@@ -71,9 +83,13 @@
               <p class="color-white">
                 The new sport that has revolutionized the world!
               </p>
-              <a class="btn btn-lg btn-success" href="reserva.html">
-Reserve Now
-              </a>
+              <a id="clicked2reserve-headerbutton" class="btn btn-lg btn-success" href="reserva.html">Reserve Now!</a>
+              <script>
+                  mixpanel.track_links("#clicked2reserve-headerbutton","clicked2reserve", {
+                    "page":"EN-index",
+                    "where": "header-button",
+                  });
+                </script>
               <a href="compra.html" class="btn btn-lg btn-default" style="width: 120px; padding: 10px 15px;">Buy One</a>
             </div>
           </div>
@@ -112,10 +128,16 @@ Reserve Now
           </div>
           <div class="row">
             <div class="col-md-6">
-              <a href="reserva.html">
+              <a id="clicked2reserve-blurb" href="reserva.html">
                 <img src="https://s3.amazonaws.com/media.jetstrap.com/ZD5KBfWiREGQK11Y8qKg_photo 3.PNG"
                 class="img-circle" width="170" height="170">
               </a>
+              <script>
+                  mixpanel.track_links("#clicked2reserve-blurb","clicked2reserve", {
+                    "page":"EN-index",
+                    "where": "blurb",
+                  });
+                </script>
               <h3>
                 Rent a FlyBoard!
               </h3>
@@ -145,9 +167,15 @@ Reserve Now
               <h1 style="margin-top: 100px;">
                 Reserve Now!
               </h1>
-              <a class="btn btn-lg btn-success" href="reserva.html">
-                Click Here
+              <a id="clicked2reserve-reservepromo" class="btn btn-lg btn-success" href="reserva.html">
+                Click here
               </a>
+              <script>
+                  mixpanel.track_links("#clicked2reserve-reservepromo","clicked2reserve", {
+                    "page":"EN-index",
+                    "where": "reserve-now-promo",
+                  });
+                </script>
           </div>
         </div>
       </div>
@@ -218,6 +246,11 @@ Reserve Now
           , "imgs/header-bg/photo13.jpg"
         ], {duration: 3000, fade: 750});
       $("#reserve-now-promo").backstretch("imgs/reserve-now-promo.jpg");
+    </script>
+    <script>
+      mixpanel.track("Page loaded", {
+        "which": "EN-index",
+      });
     </script>
   </body>
 </html>

@@ -35,7 +35,15 @@
               <a href="index.html">Home</a>
             </li>
             <li>
-              <a href="reserva.html">Rent a FlyBoard</a>
+              <a id="clicked2reserve-navbar" href="reserva.html">
+                Rent a FlyBoard
+              </a>
+              <script>
+                mixpanel.track_links("#clicked2reserve-navbar", "clicked2reserve", {
+                  "page" : "EN-galeria",
+                  "where": "navbar",
+                });
+              </script>
             </li>
             <li>
               <a href="compra.html">Buy a FlyBoard</a>
@@ -44,7 +52,16 @@
               <a href="galeria.html">Gallery</a>
             </li>
             <li>
-              <a href="contactenos.html">Contact Us</a>
+              <a id="clicked2contact-navbar" href="contactenos.html">
+                Contact Us
+              </a>
+              <script>
+                mixpanel.track_links("#clicked2contact-navbar", "clicked2contact", {
+                  "page" : "EN-galeria",
+                  "where": "navbar",
+                });
+              </script>
+
             </li>
           </ul>
           <div style="position: relative; top: 15px;" class="hide-when-small pull-right link-colors">
@@ -103,9 +120,15 @@
      <div class="container">
        <div class="row" style="padding: 30px 0; ">
           <div class="col-md-6 text-center" style="margin-top: 30px;">        
-              <a href="reserva.html">
+              <a id="clicked2reserve-reservepromo" href="reserva.html">
                 <img src="imgs/reserva-en-linea.png">
               </a>
+              <script>
+                mixpanel.track_links("#clicked2reserve-reservepromo", "clicked2reserve", {
+                  "page" : "EN-galeria",
+                  "where": "reserva-promo",
+                });
+              </script>
           </div>
           <div class="col-md-6 text-center" style="margin-top: 30px;">
               <a href="compra.html">
@@ -148,6 +171,11 @@
     <script>
       $("#reserva-promo").backstretch("imgs/reserva-promo.jpg");
       $("#compra-promo").backstretch("imgs/compra-promo.jpg");
+    </script>
+    <script>
+      mixpanel.track("Page loaded", {
+        "which": "EN-galeria",
+      });
     </script>
 
   </body>

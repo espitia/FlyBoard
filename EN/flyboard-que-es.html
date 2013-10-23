@@ -33,7 +33,15 @@
               <a href="index.html">Home</a>
             </li>
             <li>
-              <a href="reserva.html">Rent a FlyBoard</a>
+              <a id="clicked2reserve-navbar" href="reserva.html">
+                Rent a FlyBoard
+              </a>
+              <script>
+                mixpanel.track("#clicked2reserve-navbar","clicked2reserve", {
+                  "page": "EN-flyboard-que-es",
+                  "where": "navbar",
+                });
+              </script>
             </li>
             <li>
               <a href="compra.html">Buy a FlyBoard</a>
@@ -42,7 +50,15 @@
               <a href="galeria.html">Gallery</a>
             </li>
             <li>
-              <a href="contactenos.html">Contact Us</a>
+              <a id="clicked2contact-navbar" href="contactenos.html">
+                Contact Us
+              </a>
+              <script>
+                mixpanel.track("#clicked2contact-navbar","clicked2contact", {
+                  "page": "EN-flyboard-que-es",
+                  "where": "navbar",
+                });
+              </script>
             </li>
           </ul>
           <div style="position: relative; top: 15px;" class="hide-when-small pull-right link-colors">
@@ -152,7 +168,15 @@
       <h3>
         Want to experience how it feels?
       </h3>
-      <a href="reserva.html" class="btn btn-success btn-lg">Reserve now</a>
+      <a id="clicked2reserve-calltoaction" href="reserva.html" class="btn btn-success btn-lg">
+        Reserve now
+      </a>
+      <script>
+                mixpanel.track("#clicked2reserve-calltoaction","clicked2reserve", {
+                  "page": "EN-flyboard-que-es",
+                  "where": "call2action",
+                });
+              </script>
     </div>
     <!-- end container -->
 
@@ -187,6 +211,11 @@
           , "imgs/header-bg/photo12.jpg"
           , "imgs/header-bg/photo13.jpg"
         ], {duration: 3000, fade: 750});
+    </script>
+    <script>
+      mixpanel.track("Page loaded", {
+        "which": "EN-flyboard-que-es",
+      });
     </script>
   </body>
 

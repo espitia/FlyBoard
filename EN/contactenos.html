@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>
-      Contactenos | Cartagena FlyBoard
+      Contact Us | Cartagena FlyBoard
     </title>
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
     rel="stylesheet">
@@ -33,7 +33,15 @@
               <a href="index.html">Home</a>
             </li>
             <li>
-              <a href="reserva.html">Rent a FlyBoard</a>
+              <a id="clicked2reserve-navbar" href="reserva.html">
+                Rent a FlyBoard
+              </a>
+              <script>
+                mixpanel.track_links("#clicked2reserve-navbar", "clicked2reserve", {
+                  "page" : "EN-contactenos",
+                  "where": "navbar",
+                });
+              </script>
             </li>
             <li>
               <a href="compra.html">Buy a FlyBoard</a>
@@ -112,7 +120,7 @@
         </div>
         <div class="col-md7 col-md-7" style="display: block;">
           <div class="well" style="margin-top:25px;">
-            <form method="post" action="contactenos-form.php">
+            <form method="post" action="contactenos-form.php" >
               <fieldset>
                 <div class="form-group">
                   <label for="Name">
@@ -135,7 +143,12 @@
                 <div class="form-group">
                   <textarea name="message" class="form-control" rows="5"></textarea>
                 </div>
+                <a class="contact-form-submit">
                 <input type="submit" name="submit" class="btn btn-success btn-lg">
+                </a>
+                <script>
+                  mixpanel.track_links(".contact-form-submit", "contact form submission",{"page":"EN",});
+                </script>
               </fieldset>
             </form>
           </div>
@@ -165,6 +178,11 @@
           , "imgs/header-bg/photo12.jpg"
           , "imgs/header-bg/photo13.jpg"
         ], {duration: 3000, fade: 750});
+    </script>
+    <script>
+      mixpanel.track("Page loaded", {
+        "which": "EN-contactenos",
+      });
     </script>
 
   </body>

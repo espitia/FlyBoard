@@ -42,7 +42,15 @@
               <a href="galeria.html">Gallery</a>
             </li>
             <li>
-              <a href="contactenos.html">Contact Us</a>
+              <a id="clicked2contact-navbar" href="contactenos.html">
+                Contact Us
+              </a>
+              <script>
+                mixpanel.track_links("#clicked2contact-navbar","clicked2contact", {
+                "page": "EN-reserva",
+                "where": "nav-bar",
+                });
+              </script>
             </li>
           </ul>
           <div style="position: relative; top: 15px;" class="hide-when-small pull-right link-colors">
@@ -106,8 +114,15 @@
           <h3>COP $199.000</h3>
           <hr>
           <p class="lead">
-            <script id="setmore_script" type="text/javascript" src="https://my.setmore.com/js/iframe/setmore_iframe.js"></script>
-          <a href="http://my.setmore.com/shortBookingPage/2e76bcac-ffec-4cd2-8706-22c02eacd3af" class="btn btn-success btn-lg">Reserve now!</a>
+            <a href="http://my.setmore.com/shortBookingPage/2e76bcac-ffec-4cd2-8706-22c02eacd3af" class="basic-package btn btn-success btn-lg">
+              Reserve now!
+            </a>
+            <script>
+              mixpanel.track_links(".basic-package","clicked reserve", {
+              "page":"EN",
+              "package": "basic",
+              });
+            </script>
           </p>
         </div><!-- end collum -->
         <div class="col-md-4 text-center pricing-blurb">
@@ -129,8 +144,15 @@
           <h3>COP $349.000</h3>
           <hr>
           <p class="lead">
-            <script id="setmore_script" type="text/javascript" src="https://my.setmore.com/js/iframe/setmore_iframe.js"></script>
-          <a href="http://my.setmore.com/shortBookingPage/2e76bcac-ffec-4cd2-8706-22c02eacd3af" class="btn btn-success btn-lg">Reserve now!</a>
+             <a href="http://my.setmore.com/shortBookingPage/2e76bcac-ffec-4cd2-8706-22c02eacd3af" class="double-package btn btn-success btn-lg">
+              Reserva Now!
+            </a>
+            <script>
+              mixpanel.track_links(".double-package","clicked reserve", {
+              "page":"EN"
+              "package": "double",
+              });
+            </script>
           </p>
         </div><!-- end collum -->
         <div class="col-md-4 text-center pricing-blurb">
@@ -153,8 +175,15 @@
           <hr>
 
           <p class="lead">
-            <script id="setmore_script" type="text/javascript" src="https://my.setmore.com/js/iframe/setmore_iframe.js"></script>
-          <a href="http://my.setmore.com/shortBookingPage/2e76bcac-ffec-4cd2-8706-22c02eacd3af" class="btn btn-success btn-lg">Reserve now!</a>
+            <a href="http://my.setmore.com/shortBookingPage/2e76bcac-ffec-4cd2-8706-22c02eacd3af" class="extended-package btn btn-success btn-lg">
+              Reserva now!
+            </a>
+            <script>
+              mixpanel.track_links(".extended-package","clicked reserved", {
+                "page":"EN",
+              "package": "extendida",
+              });
+            </script>
           </p>
         </div><!-- end collum -->
       </div>
@@ -188,6 +217,11 @@
           , "imgs/header-bg/photo7.jpg"
           , "imgs/header-bg/photo8.jpg"
         ], {duration: 3000, fade: 750});
+    </script>
+    <script>
+      mixpanel.track("Page loaded", {
+        "which": "EN-reserva",
+      });
     </script>
 
   </body>

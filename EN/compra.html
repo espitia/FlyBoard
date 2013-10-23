@@ -33,7 +33,15 @@
               <a href="index.html">Home</a>
             </li>
             <li>
-              <a href="reserva.html">Rent a FlyBoard</a>
+              <a id="clicked2reserve-navbar" href="reserva.html">
+                Rent a FlyBoard
+              </a>
+                <script>
+                  mixpanel.track_links("#clicked2reserve-navbar","clicked2reserve", {
+                    "page":"EN-compra",
+                    "where": "navbar",
+                  });
+                </script>
             </li>
             <li class="active">
               <a href="compra.html">Buy a FlyBoard</a>
@@ -42,7 +50,15 @@
               <a href="galeria.html">Gallery</a>
             </li>
             <li>
-              <a href="contactenos.html">Contact Us</a>
+              <a id="clicked2contact-navbar" href="contactenos.html">
+                Contact Us
+              </a>
+                <script>
+                  mixpanel.track_links("#clicked2contact-navbar","clicked2contact", {
+                  "page": "EN-compra",
+                  "where": "nav-bar",
+                  });
+                </script>
             </li>
           </ul>
           <div style="position: relative; top: 15px;" class="hide-when-small pull-right link-colors">
@@ -153,7 +169,13 @@
       <h3>
         Need more info? Have any questions?
       </h3>
-      <a href="#" class="btn btn-success btn-lg">Contact Us</a>
+      <a id="clicked2contact-calltoaction" href="contactenos.html" class="btn btn-success btn-lg">   
+        Contact Us
+      </a>
+      <script>mixpanel.track_links("#clicked2contact-calltoaction","clicked2contact", {
+        "page": "EN-compra", 
+        "where": "calltoaction",
+      });
     </div>
     <!-- end call to action -->
 
@@ -184,6 +206,11 @@
           , "imgs/header-bg/photo1.jpg"
           , "imgs/header-bg/photo2.jpg"
         ], {duration: 3000, fade: 750});
+    </script>
+    <script>
+      mixpanel.track("Page loaded", {
+        "which": "EN-compra",
+      });
     </script>
     <!-- end scripts -->
   </body>
